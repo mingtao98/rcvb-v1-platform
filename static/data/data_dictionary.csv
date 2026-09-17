@@ -1,0 +1,31 @@
+table,field,unit,required,granularity,definition
+experiment,timestamp,ISO8601+08:00,required,1min,区间开始时刻；另保留末边界；勿使用无时区时间
+experiment,indoor_temp_c,℃,required,1min boundary,同一热区代表性干球温度；不能用黑球或设定值替代
+experiment,outdoor_temp_c,℃,required,1min mean,现场辐射遮蔽的室外干球温度；不用异地室温
+experiment,hvac_kw,kW_e,required,1min mean,与净显冷作用关联的可调/有效空调输入电功率；按实际状态剔除待机，不能将缺测填0
+experiment,hvac_meter_kw,kW_e,required for COP,1min mean,同一设备边界完整电功率，含待机/辅助；总COP分母与总冷量必须同边界
+experiment,solar_w_m2,W/m²,recommended,1min mean,现场辐射；辨识器内部除1000；无辐射时简化并标识遗漏得热
+experiment,setpoint_c,℃,recommended,event/1min last,设定温度不是实测空气温度；停机可以留空
+experiment,hvac_command,ON/OFF,recommended,event/1min,命令不等于实际压缩机状态，设备反馈宜单独记录
+experiment,rh_pct,%,recommended,1min mean,占用区湿度；凝露/高湿保护必须现场执行
+experiment,q_sensible_kw,kW_th,optional,1min mean,真正送入所建模区域的净显冷量；禁止用总冷量直接冒充
+experiment,q_total_kw,kW_th,optional,1min mean,同电气边界总冷量，仅用于冷量/电量COP，不自动用于温度RC
+experiment,data_kind,text,required for provenance,per file,MEASURED/SYNTHETIC_NOT_MEASURED/TO_BE_MEASURED 等
+experiment,event,text,recommended,event,保护终止、开门、人员变化、设备故障、数据修补等
+dispatch,timestamp,ISO8601+08:00,required,15min boundary,"本行覆盖[t,t+15min)，时序须与dt_h相同"
+dispatch,outdoor_temp_c,℃,required,15min mean,预测输入，实测未来仅用于理论基准
+dispatch,q_gain_kw,kW_th or kW_e_eq,required,15min mean,围护外扰以外内部/太阳/通风剩余得热；必须与RC域一致
+dispatch,pv_kw,kW,required,15min mean,完整可用光伏功率，不是被负荷截断后的就地消纳量
+dispatch,base_load_kw,kW,required,15min mean,不含优化器再次加入的可调空调；固定风机/待机需明确归属
+dispatch,buy_price,元/kWh,required,15min,实际价表需按适用月份核实；演示值非当前供电报价
+dispatch,sell_price,元/kWh,required,15min,没有合法/批准上网条件则保持export_max_kw=0
+dispatch,occupied,0/1,required,15min,决定舒适包络；不可为省钱擅自将有人状态改无人
+dispatch,solar_w_m2,W/m²,required for ID handoff,15min mean,接入辨识包时用于重建q_gain，避免物理/等效热量混用
+config,r_k_per_kw,K/kW,required,per model,物理或电功率等效模型必须标记domain
+config,c_kwh_per_k,kWh/K,required,per model,物理域kWh_th/K；等效域kWh_e_eq/K；不可混用
+config,eta_sensible,kW_th/kW_e or 1,required,per model,净显热系数不是总COP；电功率等效域固定1
+config,battery_kwh,kWh_e,required,per asset,额定容量；SOC上下限另行给定
+config,degradation_yuan_per_kwh_out,"元/kWh_e,AC out",required,per asset,仅交流侧放电量×单价，不叠加完整年化寿命成本
+result,closed_loop_allowed,bool,always false V1,per result,本版无设备写接口；验收测试通过也不是现场授权
+result,pv_accepted_ratio,0..1,computed,period,1−弃光/可用光伏；不等于扣除储能损耗后的终端有效消纳率
+result,soc_th_unclipped,dimensionless,computed,state,参考温区固定，无人放宽边界时保留超0..1数值
