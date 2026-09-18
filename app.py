@@ -78,11 +78,16 @@ def identify():
         body = request.get_json(force=True)
         step = int(body.get("identify_minutes", 5))
         rows = list(csv.DictReader(io.StringIO(body["csv_text"])))
+        # The downloadable 24 h examples include a final END_BOUNDARY row whose
+        # temperature is useful for the last transition but whose HVAC inputs
+        # are intentionally blank.  Keep it for ``nxt`` while only building
+        # regressors from complete input rows below.
         if len(rows) < max(30, step * 4):
             raise ValueError("数据量不足。请上传连续的 1 分钟 CSV。")
         tin = np.array([_float(r, ["indoor_temp_c", "indoor_temp", "tin_c"]) for r in rows])
         tout = np.array([_float(r, ["outdoor_temp_c", "outdoor_temp", "tout_c"]) for r in rows])
-        power = np.array([_float(r, ["hvac_kw", "hvac_power", "hvac_power_kw"]) for r in rows])
+        input_rows = rows[:-1]
+        power = np.array([_float(r, ["hvac_kw", "hvac_power", "hvac_power_kw"]) for r in input_rows])
         n = min(len(tin) - 1, len(power))
         idx = np.arange(0, n, step)
         if len(idx) < 12:
