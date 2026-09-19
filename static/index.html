@@ -1,5 +1,7 @@
 <!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>RCVB V1.0 · Render 在线演示</title><style>:root{--bg:#f4f6f8;--ink:#172b42;--muted:#637186;--line:#dce3eb;--brand:#123f65;--accent:#a16427}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI","Microsoft YaHei",sans-serif}header{height:76px;background:#fff;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 38px}.brand{font-size:30px;letter-spacing:2px;font-weight:800}.brand small{font-size:10px;letter-spacing:2px;font-weight:500;margin-left:20px}.badge{font-size:12px;border:1px solid #d5e0e8;padding:6px 13px;border-radius:20px}.shell{display:grid;grid-template-columns:260px 1fr;max-width:1580px;margin:auto}aside{padding:28px 24px;position:sticky;top:0;height:calc(100vh - 76px);border-right:1px solid var(--line)}h1{font-size:23px;line-height:1.55;margin:0 0 7px}aside p,.muted{color:var(--muted);font-size:13px}nav{margin-top:30px;display:grid;gap:8px}button{font:inherit;border:1px solid var(--line);border-radius:6px;background:white;color:var(--ink);padding:10px 15px;cursor:pointer}button:hover{border-color:var(--brand)}button:disabled{opacity:.5;cursor:wait}nav button{text-align:left;border:0;background:transparent;font-size:14px}nav button.active,button.primary{background:var(--brand);color:white}.side-note{font-size:11px;color:var(--muted);margin-top:38px}main{padding:26px 38px 60px;min-width:0}.eyebrow{color:var(--muted);font-size:11px;letter-spacing:2px;margin:22px 0 8px}h2{font-size:27px;line-height:1.5;margin:0 0 10px}h3{font-size:16px;margin:0 0 10px}.tab{display:none}.tab.active{display:block}#status{padding:9px 14px;font-size:13px;background:#e6edf2;border-radius:5px;word-break:break-word}#status.error{background:#f7e7df;color:#863316}.toolbar{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin:20px 0}.toolbar label{display:flex;gap:10px;align-items:center}.kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:13px;margin:20px 0}.kpi{background:#fff;padding:19px;border:1px solid var(--line);border-top:3px solid var(--brand);border-radius:6px}.kpi strong{font-size:27px;display:block;margin-top:5px}.kpi span{font-size:12px;color:var(--muted)}.notice{background:#fff6e8;border-left:3px solid var(--accent);font-size:13px;padding:15px 19px;margin:18px 0}.chart-card{background:white;border:1px solid var(--line);padding:22px;border-radius:7px;margin-bottom:18px}.chart-card canvas{width:100%;height:250px;display:block}.chart-card p{font-size:11px;color:var(--muted);margin-bottom:0}.table-wrap{overflow:auto;background:#fff;border:1px solid var(--line);margin:16px 0}table{border-collapse:collapse;width:100%;font-size:13px}th,td{padding:12px 14px;text-align:left;border-bottom:1px solid var(--line);white-space:nowrap}th{background:#eaf0f5}.form-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin:24px 0}label{font-size:13px;display:block}input,select,textarea{display:block;width:100%;font:inherit;border:1px solid #cbd6e0;border-radius:5px;background:white;padding:9px;margin-top:6px;color:var(--ink)}input[type=checkbox]{width:auto;display:inline;margin-right:8px}.check{padding-top:18px}textarea,pre{font-family:ui-monospace,SFMono-Regular,monospace;font-size:12px}pre{background:#eaf0f5;padding:19px;max-height:600px;overflow:auto;white-space:pre-wrap;overflow-wrap:anywhere}a{color:var(--brand)}.link-button{display:inline-block;padding:10px 15px;background:#fff;border:1px solid var(--line);border-radius:5px;margin:8px 8px 8px 0}footer{font-size:11px;color:var(--muted);padding:24px;text-align:center;border-top:1px solid var(--line)}details{margin:16px 0}summary{cursor:pointer;color:var(--brand)}@media(max-width:1050px){.kpis{grid-template-columns:repeat(2,1fr)}.form-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.shell{grid-template-columns:215px 1fr}main{padding:20px}aside{padding:25px 15px}h2{font-size:24px}}@media(max-width:700px){header{padding:0 16px}.brand small{display:none}.shell{display:block}aside{position:static;height:auto;border-right:0;border-bottom:1px solid var(--line)}aside h1,aside p,.side-note{display:none}nav{margin:0;display:flex;overflow:auto;gap:3px}nav button{white-space:nowrap;font-size:12px;padding:8px}.form-grid{grid-template-columns:1fr}.kpi strong{font-size:23px}main{padding:15px}.chart-card{padding:12px}.toolbar label{display:block}.chart-card canvas{height:220px}}
-button:disabled{opacity:.45;cursor:not-allowed}</style></head>
+button:disabled{opacity:.45;cursor:not-allowed}
+.replay-panel{border:1px solid #c7dbe9;border-top:3px solid var(--brand);background:#f8fbfd;padding:20px;border-radius:7px;margin:20px 0}.replay-panel[hidden]{display:none}.replay-panel h3{margin-bottom:4px}.replay-panel .toolbar{margin:14px 0;gap:8px}.replay-panel select{width:auto;margin:0}.replay-panel input[type=range]{padding:0;accent-color:var(--brand);cursor:pointer}.replay-panel .check{padding:0}.replay-progress{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;font-size:13px}.replay-clock{font-variant-numeric:tabular-nums;font-size:22px;color:var(--brand)}.replay-flow{color:var(--muted);font-size:12px;margin:8px 0}.replay-window{background:#e6eff5;border-left:3px solid #759bb7;padding:8px 12px;font-size:12px;margin-top:12px}.replay-states{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;margin-top:15px}.replay-states .kpi{padding:12px;border-top-width:1px}.replay-states .kpi strong{font-size:20px;font-variant-numeric:tabular-nums}.summary-label{font-size:12px;color:var(--muted);margin-top:18px}.replay-panel button:focus-visible,.replay-panel input:focus-visible,.replay-panel select:focus-visible{outline:3px solid #82afcc;outline-offset:3px}@media(max-width:1050px){.replay-states{grid-template-columns:repeat(3,minmax(0,1fr))}}@media(max-width:700px){.replay-panel{padding:14px}.replay-states{grid-template-columns:repeat(2,minmax(0,1fr))}.replay-panel .toolbar label{display:flex}}
+</style></head>
 <body><header><div class="brand">RCVB <small>RESEARCH WORKBENCH</small></div><span class="badge">V1.0 · Render 在线演示</span></header>
 <div class="shell"><aside><h1>建筑虚拟储能<br>柔性调控平台</h1><p>RC热模型 × 热舒适 × 联合MPC</p><nav><button data-tab="results" class="active">01　示范结果</button><button data-tab="experiment">02　24h实验流程</button><button data-tab="scenarios">03　场景参数库</button><button data-tab="identify">04　实测参数辨识</button><button data-tab="optimize">05　联合MPC计算</button><button data-tab="guide">06　说明与边界</button></nav><div class="side-note">本页：预先计算的合成结果<br>重新计算：启动交付包Python平台</div></aside>
 <main><div class="notice"><strong>在线研究演示。</strong>场景库、文件下载和合成结果可直接使用；24h CSV 参数辨识由服务器实时计算。联合 MPC 当前展示已验证的合成算例，不向现场设备发送控制指令。</div><div id="status" role="status">正在加载演示结果…</div>
@@ -14,19 +16,19 @@ a = exp(−Δt/(RC))
 E[k+1] = E[k] + ηc Pc[k] Δt − Pd[k] Δt/ηd
 Pgrid,in + PPV − Pcurt + Pd = Pbase + PHVAC + Pc + Pgrid,out
 J = Σ(πbuy Pgrid,in − πsell Pgrid,out + cdeg Pd) Δt + 舒适违约惩罚</pre><p>建筑虚拟储能是相对于空调基线的可调负荷，不是额外电源。总COP需要同边界冷量与完整电量；室温模型采用显冷作用。</p><a href="/docs/README">查看运行说明</a></section>
-</main></div><footer>RCVB V1.0 · 研究与调试交付版 · 数值结果可复现，不代表现场验收通过</footer><script>'use strict';
+</main></div><footer>RCVB V1.0 · 研究与调试交付版 · 数值结果可复现，不代表现场验收通过</footer><script src="/replay.js?v=20260919"></script><script>'use strict';
 let result=null,config={},identification=null,parameterPack=null,allScenarios=[];
 const $=id=>document.getElementById(id),palette=['#174a72','#c17a32','#448d85','#8b7098','#8c969e'];
 const fields={r_k_per_kw:'等效R / K·kW⁻¹',c_kwh_per_k:'等效C / kWh·K⁻¹',eta_sensible:'净显热作用 / 可调电功率',hvac_max_kw:'空调可调功率上限 / kW',battery_kwh:'电池容量 / kWh',battery_power_kw:'电池功率 / kW',initial_temp_c:'初始室温 / ℃',initial_soc:'初始SOC / 0–1',eta_charge:'充电效率 / 0–1',eta_discharge:'放电效率 / 0–1',degradation_yuan_per_kwh_out:'放电折损 / 元·kWh⁻¹',grid_max_kw:'购电功率上限 / kW',comfort_lo_c:'有人温度下限 / ℃',comfort_hi_c:'有人温度上限 / ℃',rh_pct:'条件室内相对湿度 / %',mrt_offset_c:'MRT−空气温度 / ℃',relative_air_speed_ms:'相对风速 / m·s⁻¹',met:'代谢率 / met',clo_effective:'有效着衣量 / clo',pmv_limit:'PMV绝对值上限',comfort_guard_c:'温度包络安全裕量 / ℃',dt_h:'控制步长 / h'};
 function status(text,error=false){$('status').textContent=text;$('status').classList.toggle('error',error);}
 async function api(path,payload){const r=await fetch(path,payload===undefined?{}:{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});const d=await r.json();if(!r.ok)throw new Error(d.error||r.statusText);return d;}
-function tab(id){document.querySelectorAll('.tab').forEach(x=>x.classList.toggle('active',x.id===id));document.querySelectorAll('nav button').forEach(x=>x.classList.toggle('active',x.dataset.tab===id));if(id==='results')drawResult();if(id==='identify'&&identification)drawID();}
+function tab(id){if(id!=='results')replay.pause();document.querySelectorAll('.tab').forEach(x=>x.classList.toggle('active',x.id===id));document.querySelectorAll('nav button').forEach(x=>x.classList.toggle('active',x.dataset.tab===id));if(id==='results')drawResult();if(id==='identify'&&identification)drawID();}
 document.querySelectorAll('nav button').forEach(b=>b.onclick=()=>tab(b.dataset.tab));
 function download(name,text,type='application/json'){const u=URL.createObjectURL(new Blob(['\ufeff'+text],{type}));const a=document.createElement('a');a.href=u;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(u),5000);}
 function number(x,d=2){return x===null||x===undefined?'—':Number(x).toFixed(d);}
 function cards(id,items){const node=$(id);node.replaceChildren();for(const [label,val,note] of items){const c=document.createElement('div');c.className='kpi';const a=document.createElement('span');a.textContent=label;const b=document.createElement('strong');b.textContent=val;const s=document.createElement('span');s.textContent=note||'';c.append(a,b,s);node.append(c);}}
 function table(nodeId,headers,rows){const t=document.createElement('table'),head=document.createElement('thead'),hr=document.createElement('tr');headers.forEach(v=>{let c=document.createElement('th');c.textContent=v;hr.append(c);});head.append(hr);t.append(head);const body=document.createElement('tbody');rows.forEach(row=>{const tr=document.createElement('tr');row.forEach(v=>{let td=document.createElement('td');td.textContent=v;tr.append(td)});body.append(tr)});t.append(body);$(nodeId).replaceChildren(t);}
-function chart(id,series,dt=.25){
+function chart(id,series,dt=.25,options={}){
  const cv=$(id);if(cv.clientWidth===0)return;
  const w=cv.clientWidth,h=cv.clientHeight,dpr=window.devicePixelRatio||1;
  cv.width=w*dpr;cv.height=h*dpr;
@@ -35,11 +37,15 @@ function chart(id,series,dt=.25){
  const vals=series.flatMap(s=>s.values.filter(v=>v!==null&&Number.isFinite(v)));if(!vals.length)return;
  let mn=Math.min(...vals),mx=Math.max(...vals);if(mx-mn<1e-8){mn-=1;mx+=1;}
  let pad=(mx-mn)*.12;mn-=pad;mx+=pad;
- const N=Math.max(...series.map(s=>s.values.length));
- const xx=k=>left+(w-left-right)*k/Math.max(1,N-1),yy=v=>h-bottom-(v-mn)/(mx-mn)*(h-top-bottom);
+ const steps=options.steps??Math.max(...series.map(s=>s.values.length-1+(s.offset||0)+(s.interval?1:0)));
+ const xx=k=>left+(w-left-right)*k/Math.max(1,steps),yy=v=>h-bottom-(v-mn)/(mx-mn)*(h-top-bottom);
+ if(options.cursor!==undefined){
+  x.fillStyle='#e6eff5';x.fillRect(xx(options.cursor),top,xx(Math.min(steps,options.cursor+options.windowSteps))-xx(options.cursor),h-top-bottom);
+  x.fillStyle='#486d88';x.font='10px sans-serif';x.textAlign='left';x.fillText('当前 '+RCVBReplay.clock(options.cursor,dt),Math.min(xx(options.cursor)+4,w-right-76),12);
+ }
  x.font='11px sans-serif';x.textAlign='right';
  for(let j=0;j<=4;j++){let v=mn+(mx-mn)*j/4,y=yy(v);x.strokeStyle='#e4eaf0';x.beginPath();x.moveTo(left,y);x.lineTo(w-right,y);x.stroke();x.fillStyle='#637186';x.fillText(v.toFixed(1),left-8,y+4);}
- x.textAlign='center';for(let j=0;j<=4;j++){let k=(N-1)*j/4;x.fillText((k*dt).toFixed(0)+'h',xx(k),h-bottom+18);}
+ x.textAlign='center';for(let j=0;j<=4;j++){let k=steps*j/4;x.fillText((k*dt).toFixed(0)+'h',xx(k),h-bottom+18);}
  series.forEach((s,j)=>{
   x.save();
   // Keep the plotted line and its legend sample in the same drawing style.
@@ -47,29 +53,72 @@ function chart(id,series,dt=.25){
   x.lineWidth=s.thin?1.5:2;
   x.setLineDash(s.thin?[6,4]:[]);
   x.beginPath();let active=false;
-  s.values.forEach((v,k)=>{if(v===null||!Number.isFinite(v)){active=false;return;}if(!active)x.moveTo(xx(k),yy(v));else x.lineTo(xx(k),yy(v));active=true;});
+  const limit=s.history&&options.cursor!==undefined?options.cursor:Infinity;
+  const pts=RCVBReplay.points(s,limit);
+  pts.forEach(([k,v])=>{if(v===null||!Number.isFinite(v)){active=false;return;}if(!active)x.moveTo(xx(k),yy(v));else x.lineTo(xx(k),yy(v));active=true;});
   x.stroke();
+  const last=pts[pts.length-1];
+  if(s.history&&options.cursor!==undefined&&last&&Number.isFinite(last[1])){x.fillStyle=x.strokeStyle;x.beginPath();x.arc(xx(last[0]),yy(last[1]),3,0,Math.PI*2);x.fill();}
   const cols=w<480?2:series.length;
   const lx=left+(j%cols)*Math.min(150,(w-left)/cols),ly=h-12-Math.floor((series.length-1)/cols)*18+Math.floor(j/cols)*18;
   x.beginPath();x.moveTo(lx,ly+1.5);x.lineTo(lx+28,ly+1.5);x.stroke();
   x.fillStyle=x.strokeStyle;x.textAlign='left';x.fillText(s.name,lx+34,ly+5);
   x.restore();
  });
+ if(options.cursor!==undefined){x.save();x.strokeStyle='#486d88';x.lineWidth=1;x.setLineDash([2,3]);x.beginPath();x.moveTo(xx(options.cursor),top);x.lineTo(xx(options.cursor),h-bottom);x.stroke();x.restore();}
 }
+const replayPanel=document.createElement('div');replayPanel.id='replay-panel';replayPanel.className='replay-panel';replayPanel.hidden=true;
+replayPanel.innerHTML=`<h3>滚动 MPC · 动态回放</h3><p class="muted">预计算算例动态回放，非实时求解、非现场设备控制。默认约 48 秒回放一天。</p><div class="toolbar"><button id="replay-play" class="primary">播放</button><button id="replay-restart">重新开始</button><button id="replay-prev">上一步</button><button id="replay-next">下一步</button><label>播放速度 <select id="replay-speed"><option value="0.5">0.5×</option><option value="1" selected>1×</option><option value="2">2×</option><option value="4">4×</option></select></label><label class="check"><input id="replay-loop" type="checkbox" checked>循环播放</label></div><div class="replay-progress"><span><strong id="replay-clock" class="replay-clock">00:00</strong> / <span id="replay-end">24:00</span></span><span id="replay-step"></span><span id="replay-status" role="status">已暂停</span></div><label for="replay-seek">时间进度（拖动或使用方向键定位）</label><input id="replay-seek" type="range" min="0" max="96" step="1" value="0"><div id="replay-window" class="replay-window"></div><p class="replay-flow">MPC 原理示意：读取当前状态 → 优化未来 4 小时 → 执行当前 15 分钟 → 更新状态</p><div id="replay-states" class="replay-states"></div><p class="muted" id="replay-power-note"></p>`;
+$('kpis').before(replayPanel);
+const summaryLabel=document.createElement('div');summaryLabel.className='summary-label';summaryLabel.textContent='全天汇总 · 以下指标和对照表不随回放时间改变';$('kpis').before(summaryLabel);
+function isReplay(){return Boolean(result&&result.rolling&&$('view-case').value==='rolling');}
+const replay=new RCVBReplay.ReplayController({canPlay:()=>isReplay()&&$('results').classList.contains('active')&&!document.hidden,onChange:()=>{updateReplay();if(isReplay()&&$('results').classList.contains('active'))drawResultCharts();}});
+function updateReplay(){
+ replayPanel.hidden=!isReplay();if(!isReplay())return;
+ const a=result.rolling,dt=result.config.dt_h,k=replay.step,n=a.H.length,i=Math.min(k,n-1),time=RCVBReplay.clock(k,dt);
+ $('replay-play').textContent=replay.playing?'暂停':'播放';$('replay-play').setAttribute('aria-pressed',String(replay.playing));
+ $('replay-clock').textContent=time;$('replay-end').textContent=RCVBReplay.clock(n,dt);
+ $('replay-step').textContent=k===n?'已完成 '+n+' / '+n+' 步':'调度第 '+(k+1)+' / '+n+' 步 · 已推进 '+k+' 个区间';
+ $('replay-status').textContent=replay.playing?(k===n?'本轮结束 · 停留 2 秒后循环':'正在回放'):(k===n?'全天回放结束':'已暂停');
+ $('replay-seek').max=n;$('replay-seek').value=k;$('replay-seek').setAttribute('aria-valuetext',time+'，已推进 '+k+' 个区间');
+ $('replay-prev').disabled=k===0;$('replay-next').disabled=k===n;
+ const end=Math.min(n,k+Math.round(4/dt));
+ $('replay-window').textContent=k===n?'已到当天 24:00，预测窗口示意结束。':'浅蓝色区域：预测窗口示意 '+time+'—'+RCVBReplay.clock(end,dt)+'；未保存未来预测轨迹，色带内不绘制预测曲线。';
+ cards('replay-states',[
+  ['室内温度',number(a.T[k])+' ℃','当前时刻状态'],
+  ['空调功率',number(a.H[i])+' kW','区间平均功率'],
+  ['购电功率',number(a.IMP[i])+' kW','区间平均功率'],
+  ['电池 SOC',number(100*a.E[k]/result.config.battery_kwh,1)+'%','当前时刻状态'],
+  ['热 SOC',number(100*a.virtual_battery.soc_th_unclipped[k],1)+'%','不截断超界值']
+ ]);
+ $('replay-power-note').textContent=(k===n?'日末功率显示最后区间：':'功率对应当前调度区间：')+RCVBReplay.clock(i,dt)+'—'+RCVBReplay.clock(i+1,dt)+'。PMV 记录于区间末，首个样本为 '+RCVBReplay.clock(1,dt)+'。';
+}
+$('replay-play').onclick=()=>replay.playing?replay.pause():replay.play();
+$('replay-restart').onclick=()=>replay.restart();
+$('replay-prev').onclick=()=>replay.seek(replay.step-1);$('replay-next').onclick=()=>replay.seek(replay.step+1);
+$('replay-seek').oninput=e=>replay.seek(e.target.value);
+$('replay-speed').onchange=e=>replay.setSpeed(e.target.value);$('replay-loop').onchange=e=>replay.setLoop(e.target.checked);
+document.addEventListener('visibilitychange',()=>{if(document.hidden)replay.pause();});
+window.addEventListener('pagehide',()=>replay.pause());
 function chosen(){if(!result)return null;const k=$('view-case').value;return result[k]||result.peak_capped_joint||result.joint;}
-function drawResult(){if(!result)return;const a=chosen(),b=result.baseline,m=a.metrics,dt=result.config.dt_h;cards('kpis',[
+function drawResult(){if(!result)return;if(replay.steps!==(result.rolling?.H.length||0))replay.reset(result.rolling?.H.length||0);const a=chosen(),b=result.baseline,m=a.metrics;updateReplay();cards('kpis',[
  ['综合运行费用',number(m.operating_cost_yuan)+' 元','含放电折损，不含资本年化'],['相对基线节费',number((m.saving_vs_baseline_ratio||0)*100)+'%','同初态、末态与舒适边界'],['最大购电功率',number(m.grid_peak_kw)+' kW','基线 '+number(b.metrics.grid_peak_kw)+' kW'],['有人PMV满足率',number(m.occupied_pmv_compliance_ratio*100,1)+'%','仅当前条件模型内评价']]);
  $('data-source').textContent=result.metadata.data_source==='SYNTHETIC_ENGINEERING_DEMO'?'数据：合成工程示范，不是项目实测。示范电价不是当地现行报价。':'数据：用户上传，真实性与计量边界未自动认证。';
  $('result-note').textContent='电量变化不等于电费变化。基线购电 '+number(b.metrics.grid_import_kwh)+' kWh，本方案 '+number(m.grid_import_kwh)+' kWh；温度越限 '+number(m.temp_violation_minutes,0)+' min。'+(m.grid_peak_kw>b.metrics.grid_peak_kw+1e-5?'本方案峰值高于基线，需要关注变压器余量/需量约束。':'本方案最大购电功率未超过基线。')+' '+a.solver.status+'；不包含真实现场闭环证明。';
- chart('temp-chart',[{name:'本方案',values:a.T},{name:'常规基线',values:b.T},{name:'下限',values:a.lo_c,thin:true,color:'#448d85'},{name:'上限',values:a.hi_c,thin:true,color:'#8b7098'}],dt);
- chart('grid-chart',[{name:'本方案购电',values:a.IMP},{name:'基线购电',values:b.IMP}],dt);
- chart('hvac-chart',[{name:'本方案空调',values:a.H},{name:'基线空调',values:b.H}],dt);
- const vb=a.virtual_battery||result.joint.virtual_battery;
- chart('soc-chart',[{name:'电池SOC %',values:a.E.map(v=>result.config.battery_kwh?100*v/result.config.battery_kwh:0)},{name:'热SOC %',values:vb.soc_th_unclipped.map(v=>v*100)}],dt);
- if(a.pmv_series)chart('pmv-chart',[{name:'PMV',values:a.pmv_series},{name:'上限（+）',values:a.H.map(()=>result.config.pmv_limit),thin:true,color:'#8b7098'},{name:'下限（−）',values:a.H.map(()=>-result.config.pmv_limit),thin:true,color:'#448d85'}],dt);
+ drawResultCharts();
  const names={baseline:'常规温控',battery_only:'仅储能',joint:'联合优化',peak_capped_joint:'联合＋限峰',rolling:'滚动MPC模拟'};
  table('comparison',['方案','费用/元','空调电量/kWh','购电/kWh','峰值/kW','温度越限/min'],Object.keys(names).filter(k=>result[k]).map(k=>{const v=result[k].metrics;return[names[k],number(v.operating_cost_yuan),number(v.hvac_kwh),number(v.grid_import_kwh),number(v.grid_peak_kw),number(v.temp_violation_minutes,0)]}));}
-$('view-case').onchange=drawResult;$('export-result').onclick=()=>result&&download('RCVB_result.json',JSON.stringify(result,null,2));
+function drawResultCharts(){
+ if(!result)return;const a=chosen(),b=result.baseline,dt=result.config.dt_h;
+ const options={steps:a.H.length};if(isReplay())Object.assign(options,{cursor:replay.step,windowSteps:Math.round(4/dt)});
+ chart('temp-chart',[{name:'本方案',values:a.T,history:true},{name:'常规基线',values:b.T},{name:'下限',values:a.lo_c,interval:true,thin:true,color:'#448d85'},{name:'上限',values:a.hi_c,interval:true,thin:true,color:'#8b7098'}],dt,options);
+ chart('grid-chart',[{name:'本方案购电',values:a.IMP,interval:true,history:true},{name:'基线购电',values:b.IMP,interval:true}],dt,options);
+ chart('hvac-chart',[{name:'本方案空调',values:a.H,interval:true,history:true},{name:'基线空调',values:b.H,interval:true}],dt,options);
+ const vb=a.virtual_battery||result.joint.virtual_battery;
+ chart('soc-chart',[{name:'电池SOC %',values:a.E.map(v=>result.config.battery_kwh?100*v/result.config.battery_kwh:0),history:true},{name:'热SOC %',values:vb.soc_th_unclipped.map(v=>v*100),history:true}],dt,options);
+ if(a.pmv_series)chart('pmv-chart',[{name:'PMV',values:a.pmv_series,offset:1,history:true},{name:'上限（+）',values:a.H.map(()=>result.config.pmv_limit),interval:true,thin:true,color:'#8b7098'},{name:'下限（−）',values:a.H.map(()=>-result.config.pmv_limit),interval:true,thin:true,color:'#448d85'}],dt,options);
+}
+$('view-case').onchange=()=>{replay.pause();drawResult();};$('export-result').onclick=()=>result&&download('RCVB_result.json',JSON.stringify(result,null,2));
 $('export-series').onclick=()=>{if(!result)return;const a=chosen(),n=a.H.length;let rows=[['step','T_start_c','T_end_c','hvac_kw','charge_kw','discharge_kw','grid_import_kw','grid_export_kw','curtailment_kw','battery_end_kwh']];for(let k=0;k<n;k++)rows.push([k,a.T[k],a.T[k+1],a.H[k],a.CH[k],a.DIS[k],a.IMP[k],a.EXP[k],a.CURT[k],a.E[k+1]]);download('RCVB_dispatch.csv',rows.map(x=>x.join(',')).join('\n'),'text/csv');};
 function renderConfig(){const n=$('config-fields');n.replaceChildren();Object.entries(fields).forEach(([k,label])=>{const l=document.createElement('label');l.textContent=label;const i=document.createElement('input');i.type='number';i.step='any';i.id='cfg-'+k;i.value=config[k];i.onchange=()=>{config[k]=Number(i.value);$('config-json').value=JSON.stringify(config,null,2);};l.append(i);n.append(l);});$('config-json').value=JSON.stringify(config,null,2);}
 $('apply-json').onclick=()=>{try{config=JSON.parse($('config-json').value);renderConfig();status('JSON已同步；运行时后端将验证范围与字段。');}catch(e){status(e.message,true);}};
@@ -82,6 +131,4 @@ $('run').onclick=async()=>{const b=$('run');b.disabled=true;try{status('Python�
 window.addEventListener('resize',()=>{drawResult();if(identification)drawID();});
 (async()=>{try{const [c,s,p,r]=await Promise.all([api('/api/default'),api('/api/catalog'),api('/api/protocol'),api('/api/demo-result')]);config=c;allScenarios=s;result=r;renderConfig();s.forEach(x=>{const o=document.createElement('option');o.value=x.scenario_id;o.textContent=x.climate_zone+' / '+x.building_type+' / '+x.envelope_level+' / '+x.hvac_type;$('scenario-select').append(o);});$('scenario-select').value='HSWW-OFF-E2-VRF';table('protocol-table',['时段','状态','设定/℃','保持/min','用途'],p.map(x=>[x.start.slice(11,16)+'–'+x.end.slice(11,16),x.command,x.setpoint_c===null?'—':x.setpoint_c,x.duration_min,x.purpose]));drawResult();status('在线演示已就绪：可浏览场景、下载模板并运行24h CSV参数辨识。');}catch(e){status(e.message,true);}})();
 
-for(const a of document.querySelectorAll('a[href]')){const path=a.getAttribute('href');if(Object.hasOwn(previewText,path)){
- const iscsv=path.endsWith('.csv');const u=URL.createObjectURL(new Blob(['\ufeff'+previewText[path]],{type:iscsv?'text/csv;charset=utf-8':'text/plain;charset=utf-8'}));a.href=u;a.download=path.split('/').pop();}}
 </script></body></html>
